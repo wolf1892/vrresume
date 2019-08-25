@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta description="Virtual reality resume demonstration">
+   <title>VR Resume</title>
+    <script src="aframe.min.js"></script>
+     <!--- Aframe text component & helvetiker_regular typeface conversion by Kevin Ngo https://github.com/ngokevin/aframe-text-component -->
+    <script src="aframe-text-component.min.js"></script>
+    <script src="helvetiker_regular.typeface.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-mixin id="font" text="font: helvetiker" material="color: blue"></a-mixin>
+            <a-mixin id="front" position="-1 1.8 -1"></a-mixin>
+            <a-mixin id="left" position="-5 1.8 3" scale="0.5 0.5" rotation="-180 -90 180"></a-mixin>
+            <a-mixin id="right" position="5 1.8 4" scale="0.5 0.5" rotation="180 90 180"></a-mixin>
+            <a-mixin id="behind" position="-0 1.8 9" scale="0.5 0.5" rotation="180 0 -180"></a-mixin>
+        </a-assets>
+        <a-entity id="about">
+            <a-entity mixin="font front" text="text: Manish Singh" position="-1 3.8 -1" scale="2.0 2.0" material="color:red">
+            </a-entity>
+            <a-entity mixin="font front" text="text: Developer" position="-1 2.8 -1" >
+            </a-entity>
+            <a-entity mixin="font front" text="text: wearemanishsingh@gmail.com" position="-1 2.0 -1"  material="color:black">
+            </a-entity>
+            <a-entity mixin="font front" text="text: thethird3y3.wordpress.com" position="-1 1.3 -1"  material="color:yellow"></a-entity>
+        </a-entity>
+        <a-entity id="experience">
+            <a-entity mixin="font right" text="text: Founder" position="5 3.8 3" material="color:red">
+            </a-entity>
+            <a-entity mixin="font right" text="text: Allreal Vision" position="5 3.4 3"></a-entity>
+            <a-entity mixin="font right" text="text: 02/16 - 07/18" position="5 3.4 7">
+            </a-entity>
+            
+        </a-entity>
+        <a-entity id="skills">
+            <a-entity mixin="font behind" text="text: Skills" position="-0 3.8 9" scale="1 1" material="color:red">
+            </a-entity>
+            <a-entity mixin="font behind" text="text: * C/C++" position="-0 3.1 9"></a-entity>
+            <a-entity mixin="font behind" text="text: * UE4/Unity3D" position="-0 2.8 9"></a-entity>
+            <a-entity mixin="font behind" text="text: * HTML" position="-0 2.5 9"></a-entity>
+            <a-entity mixin="font behind" text="text: * WebVR" position="-0 2.2 9"></a-entity>
+            <a-entity mixin="font behind" text="text: * CSS" position="-0 1.3 9"></a-entity>
+            <a-entity mixin="font behind" text="text: * Bash" position="-0 1 9"></a-entity>
+        </a-entity>
+        </a-entity>
+        <a-entity id="education">
+            <a-entity mixin="font left" text="text: St John college of Engineering" position="-5 3.8 4" material="color:red">
+            </a-entity>
+            <a-entity mixin="font left" text="text: B.E" position="-5 3.4 4">
+            </a-entity>
+            <a-entity mixin="font left" text="text: University of Mumbai" position="-5 2.8 4" material="color:red">
+            </a-entity>
+            
+        <a-camera position="0 1.8 3" fov="90" cursor-opacity="0" near="2.5"></a-camera>
+        <a-sky color="grey"></a-sky>
+    </a-scene>
+</body>
+
+</html>
